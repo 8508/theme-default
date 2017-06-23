@@ -9,7 +9,8 @@
     "src"
   ],
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp build",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
