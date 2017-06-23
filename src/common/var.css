@@ -11,6 +11,8 @@
 
   /* Colors
   -------------------------- */
+  --color-skin: #EA391B;
+  --color-skin-hover: #C23714;
   --color-primary: #20a0ff;
 
   --color-success: #13ce66;
@@ -35,6 +37,18 @@
   --color-light-gray: color(var(--color-base-black) h(+10) s(33%) l(92%));
   --color-extra-light-gray: color(var(--color-base-black) h(+6) s(33%) l(95%));
 
+  --color-radio-text: #222;
+  --color-radio-text-hover: #222;
+  --color-radio-text-disabled: #222;
+  --color-radio-border: #BBBBBB;
+  --color-radio-border-hover: var(--color-skin);
+  --color-radio-border-disabled: #222;
+  --color-radio-bg: #222;
+  --color-radio-bg-hover: #222;
+  --color-radio-bg-disabled: #222;
+
+  --color-checkbox-text: #222;
+
   /* Link
   -------------------------- */
   --link-color: var(--color-extra-light-black);
@@ -42,7 +56,7 @@
 
   /* Border
   -------------------------- */
-  --border-width-base: 1px;
+  --border-width-base: 2px;
   --border-style-base: solid;
   --border-color-base: var(--color-extra-light-silver);
   --border-color-hover: var(--color-base-silver);
@@ -88,14 +102,14 @@
 
   /* Checkbox
   -------------------------- */
-  --checkbox-font-size: 14px;
-  --checkbox-color: var(--color-base-black);
-  --checkbox-input-height: 18px;
-  --checkbox-input-width: 18px;
-  --checkbox-input-border-radius: var(--border-radius-base);
+  --checkbox-font-size: 13px;
+  --checkbox-color: var(--color-checkbox-text);
+  --checkbox-input-height: 16px;
+  --checkbox-input-width: 16px;
+  --checkbox-input-border-radius: var(--border-radius-small);
   --checkbox-input-fill: var(--color-white);
   --checkbox-input-border: var(--border-base);
-  --checkbox-input-border-color: var(--border-color-base);
+  --checkbox-input-border-color: var(--color-skin);
   --checkbox-icon-color: var(--color-white);
 
   --checkbox-disabled-input-border-color: var(--disabled-border-base);
@@ -106,11 +120,11 @@
   --checkbox-disabled-checked-input-border-color: var(--disabled-border-base);
   --checkbox-disabled-checked-icon-color: var(--color-white);
 
-  --checkbox-checked-input-border-color: var(--color-secondary);
-  --checkbox-checked-input-fill: var(--color-primary);
+  --checkbox-checked-input-border-color: var(--color-skin);
+  --checkbox-checked-input-fill: var(--color-skin);
   --checkbox-checked-icon-color: var(--fill-base);
 
-  --checkbox-input-border-color-hover: var(--color-primary);
+  --checkbox-input-border-color-hover: var(--color-skin);
 
   --checkbox-button-font-size: var(--font-size-base);
   --checkbox-button-checked-fill: var(--color-primary);
@@ -122,13 +136,13 @@
   /* Radio
   -------------------------- */
   --radio-font-size: 14px;
-  --radio-color: var(--color-base-black);
-  --radio-input-height: 18px;
-  --radio-input-width: 18px;
+  --radio-color: var(--color-radio-text);
+  --radio-input-height: 16px;
+  --radio-input-width: 16px;
   --radio-input-border-radius: var(--border-radius-circle);
   --radio-input-fill: var(--color-white);
-  --radio-input-border: var(--border-base);
-  --radio-input-border-color: var(--border-color-base);
+  --radio-input-border: var(--border-width-base) var(--border-style-base) var(--color-radio-border);
+  --radio-input-border-color: var(--color-skin);
   --radio-icon-color: var(--color-white);
 
   --radio-disabled-input-border-color: var(--disabled-border-base);
@@ -139,11 +153,11 @@
   --radio-disabled-checked-input-border-color: var(--disabled-border-base);
   --radio-disabled-checked-icon-color: var(--color-white);
 
-  --radio-checked-input-border-color: var(--color-primary);
+  --radio-checked-input-border-color: var(--color-skin);
   --radio-checked-input-fill: var(--color-white);
-  --radio-checked-icon-color: var(--color-primary);
+  --radio-checked-icon-color: var(--color-skin);
 
-  --radio-input-border-color-hover: var(--color-primary);
+  --radio-input-border-color-hover: var(--color-skin);
 
   --radio-button-font-size: var(--font-size-base);
   --radio-button-checked-fill: var(--color-primary);
