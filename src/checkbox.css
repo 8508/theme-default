@@ -118,12 +118,12 @@
         border: 2px solid var(--checkbox-checked-icon-color);
         border-left: 0;
         border-top: 0;
-        height: 8px;
-        left: 5px;
+        height: 7px;
+        left: 4px;
         position: absolute;
-        top: 1px;
+        top: 0px;
         transform: rotate(45deg) scaleY(0);
-        width: 4px;
+        width: 3px;
         transition: transform .15s cubic-bezier(.71,-.46,.88,.6) .05s;
         transform-origin: center;
       }
@@ -140,11 +140,11 @@
 
     @e label {
       font-size: var(--checkbox-font-size);
-      padding-left: 5px;
+      padding-left: 10px;
     }
 
     & + .el-checkbox {
-      margin-left: 15px;
+      margin-left: 29px;
     }
   }
 
@@ -215,7 +215,7 @@
         box-shadow: none;
       }
     }
-    
+
     &.is-focus {
       & .el-checkbox-button__inner {
         border-color: var(--checkbox-button-checked-border-color);
