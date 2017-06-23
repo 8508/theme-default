@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/ElementUI/theme-default#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
     "gulp-cssmin": "^0.1.7",
     "gulp-postcss": "^6.1.1",
