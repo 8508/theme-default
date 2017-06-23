@@ -1,6 +1,12 @@
 # element-theme-default
 > element component defualt theme.
 
+## Dev
+
+```sh
+npm run dev
+npm run build
+```
 
 ## Installation
 ```shell
