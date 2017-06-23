@@ -45,6 +45,6 @@ gulp.task('dev', function() {
     },
   });
 
-  gulp.watch('./src/*.css', ['compile:bs']);
+  gulp.watch('./src/**/*.css', ['compile:bs']);
   gulp.watch('*.html').on('change', browserSync.reload);
 });
