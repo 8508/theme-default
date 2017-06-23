@@ -7,6 +7,15 @@
   <title>Document</title>
   <link rel="stylesheet" href="./dev/radio.css">
   <link rel="stylesheet" href="./dev/checkbox.css">
+  <link rel="stylesheet" href="./dev/icon.css">
+  <link rel="stylesheet" href="./dev/button.css">
+  <link rel="stylesheet" href="./dev/pagination.css">
+  <style>
+    /* 测试分页居中 */
+    .pagination-center {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <h1>Docs</h1>
@@ -29,6 +38,14 @@
         <el-checkbox label="选中且禁用" disabled></el-checkbox>
       </el-checkbox-group>
     </div>
+    <el-button @click="visible = true">按钮</el-button>
+    <el-dialog v-model="visible" title="Hello world">
+      <p>欢迎使用 Element</p>
+    </el-dialog>
+    <el-pagination class="pagination-center"
+      layout="prev, pager, next"
+      :total="1000">
+    </el-pagination>
   </div>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
