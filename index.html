@@ -5,23 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
   <title>Document</title>
-  <link rel="stylesheet" href="./dev/button.css">
+  <link rel="stylesheet" href="./dev/radio.css">
+  <link rel="stylesheet" href="./dev/checkbox.css">
 </head>
 <body>
   <h1>Docs</h1>
+  <ul>
+    <li><a href="#radio">radio</a></li>
+    <li><a href="#checkbox">checkbox</a></li>
+  </ul>
   <div id="app">
-    <el-button @click="visible = true">按钮</el-button>
-    <el-dialog v-model="visible" title="Hello world">
-      <p>欢迎使用 Element</p>
-    </el-dialog>
+    <div id="radio">
+      <el-radio class="radio" v-model="radio" label="1">备选项</el-radio>
+      <el-radio class="radio" v-model="radio" label="2">备选项</el-radio>
+    </div>
+    <div id="checkbox">
+      <el-checkbox-group v-model="checkList">
+      <el-checkbox label="复选框 A"></el-checkbox>
+      <el-checkbox label="复选框 B"></el-checkbox>
+      <el-checkbox label="复选框 C"></el-checkbox>
+      <el-checkbox label="禁用" disabled></el-checkbox>
+      <el-checkbox label="选中且禁用" disabled></el-checkbox>
+    </el-checkbox-group>
+    </div>
   </div>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
   <script>
     new Vue({
       el: '#app',
-      data: function() {
-        return { visible: false }
+      data() {
+        return {
+          radio: 1,
+          checkList: [],
+        }
       }
     })
   </script>

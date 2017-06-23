@@ -86,7 +86,7 @@
       }
 
       &::after {
-        circle: 6px var(--color-white);
+        circle: 4px var(--color-white);
         content: "";
         position: absolute;
         left: 50%;
@@ -110,7 +110,7 @@
 
     @e label {
       font-size: var(--radio-font-size);
-      padding-left: 5px;
+      padding-left: 10px;
     }
   }
 }
