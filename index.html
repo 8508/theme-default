@@ -16,19 +16,25 @@
       text-align: center;
     }
   </style>
+  <link rel="stylesheet" href="./dev/form.css">
+  <link rel="stylesheet" href="./dev/form-item.css">
+  <link rel="stylesheet" href="./dev/input.css">
 </head>
 <body>
   <h1>Docs</h1>
   <ul>
     <li><a href="#radio">radio</a></li>
     <li><a href="#checkbox">checkbox</a></li>
+    <li><a href="#form">form/input</a></li>
   </ul>
   <div id="app">
     <div id="radio">
+      <h2>radio</h2>
       <el-radio class="radio" v-model="radio" label="1">备选项</el-radio>
       <el-radio class="radio" v-model="radio" label="2">备选项</el-radio>
     </div>
     <div id="checkbox">
+      <h2>checkbox</h2>
       <el-checkbox-group v-model="checkList">
         <el-checkbox label="复选框 A"></el-checkbox>
         <el-checkbox label="复选框 B"></el-checkbox>
@@ -38,14 +44,33 @@
         <el-checkbox label="选中且禁用" disabled></el-checkbox>
       </el-checkbox-group>
     </div>
-    <el-button @click="visible = true">按钮</el-button>
-    <el-dialog v-model="visible" title="Hello world">
-      <p>欢迎使用 Element</p>
-    </el-dialog>
     <el-pagination class="pagination-center"
       layout="prev, pager, next"
       :total="1000">
     </el-pagination>
+    <div id="form" style="width: 400px">
+      <h2>form/input</h2>
+      <el-form
+        :label-position="labelPosition"
+        label-width="100px"
+        :model="ruleForm"
+        :rules="rules"
+        ref="ruleForm"
+      >
+        <el-form-item label="名称：">
+          <el-input v-model="ruleForm.name" placeholder="test"></el-input>
+        </el-form-item>
+        <el-form-item label="活动区域：">
+          <el-input v-model="ruleForm.region"></el-input>
+        </el-form-item>
+        <el-form-item label="活动名称：" prop="name2">
+          <el-input v-model="ruleForm.name2" placeholder="error test"></el-input>
+        </el-form-item>
+        <el-form-item label="活动形式：">
+          <el-input v-model="ruleForm.type" :disabled="true" placeholder="test"></el-input>
+        </el-form-item>
+      </el-form>
+    </div>
   </div>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
@@ -56,6 +81,19 @@
         return {
           radio: 1,
           checkList: [],
+          labelPosition: 'right',
+          ruleForm: {
+            name: '',
+            name2: '',
+            region: '',
+            type: ''
+          },
+          rules: {
+            name2: [
+              { required: true, message: '请输入活动名称', trigger: 'blur' },
+              { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+            ]
+          }
         }
       }
     })

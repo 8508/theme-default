@@ -37,18 +37,6 @@
   --color-light-gray: color(var(--color-base-black) h(+10) s(33%) l(92%));
   --color-extra-light-gray: color(var(--color-base-black) h(+6) s(33%) l(95%));
 
-  --color-radio-text: #222;
-  --color-radio-text-hover: #222;
-  --color-radio-text-disabled: #222;
-  --color-radio-border: #BBBBBB;
-  --color-radio-border-hover: var(--color-skin);
-  --color-radio-border-disabled: #222;
-  --color-radio-bg: #222;
-  --color-radio-bg-hover: #222;
-  --color-radio-bg-disabled: #222;
-
-  --color-checkbox-text: #222;
-
   /* Link
   -------------------------- */
   --link-color: var(--color-extra-light-black);
@@ -102,6 +90,7 @@
 
   /* Checkbox
   -------------------------- */
+  --color-checkbox-text: #222;
   --checkbox-font-size: 13px;
   --checkbox-color: var(--color-checkbox-text);
   --checkbox-input-height: 16px;
@@ -135,6 +124,16 @@
 
   /* Radio
   -------------------------- */
+  --color-radio-text: #222;
+  --color-radio-text-hover: #222;
+  --color-radio-text-disabled: #222;
+  --color-radio-border: #BBBBBB;
+  --color-radio-border-hover: var(--color-skin);
+  --color-radio-border-disabled: #222;
+  --color-radio-bg: #222;
+  --color-radio-bg-hover: #222;
+  --color-radio-bg-disabled: #222;
+
   --radio-font-size: 14px;
   --radio-color: var(--color-radio-text);
   --radio-input-height: 16px;
@@ -266,30 +265,33 @@
 
   /* Input
   -------------------------- */
-  --input-font-size: var(--font-size-base);
-  --input-color: var(--font-color-base);
+  --input-font-size: 13px;
+  --input-color: #222;
+  --input-label-color: #888;
   --input-width: 140px;
-  --input-height: 36px;
-  --input-border: var(--border-base);
-  --input-border-color: var(--border-color-base);
-  --input-border-radius: var(--border-radius-base);
+  --input-height: 32px;
+  --input-border: 1px solid #D6D6D6;
+  --input-border-color: #D6D6D6;
+  --input-border-radius: 4px;
   --input-border-color-hover: var(--border-color-hover);
   --input-fill: var(--color-white);
   --input-fill-disabled: var(--disabled-fill-base);
   --input-color-disabled: var(--font-color-disabled-base);
   --input-icon-color: var(--color-extra-light-silver);
-  --input-placeholder-color: var(--color-light-silver);
+  --input-placeholder-color: #D6D6D6;
   --input-max-width: 314px;
 
-  --input-hover-border: var(--border-color-hover);
+  --input-hover-border: #333;
 
-  --input-focus-border: var(--color-primary);
+  --input-focus-border: #333;
   --input-focus-fill: var(--color-white);
 
-  --input-disabled-fill: var(--disabled-fill-base);
-  --input-disabled-border: var(--disabled-border-base);
-  --input-disabled-color: var(--disabled-color-base);
-  --input-disabled-placeholder-color: var(--color-extra-light-silver);
+  --input-disabled-fill: #F4F4F4;
+  --input-disabled-border: #D6D6D6;
+  --input-disabled-color: #C6C6C6;
+  --input-disabled-placeholder-color: #C6C6C6;
+
+  --input-error-text: #D63C15;
 
   --input-large-font-size: 16px;
   --input-large-height: 42px;
