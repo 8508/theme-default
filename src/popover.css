@@ -88,6 +88,15 @@
         border-left-width: 0;
       }
     }
+    /* 针对 right-start 的特殊修改 */
+    &[x-placement="right-start"] {
+      margin-left: calc(var(--popover-arrow-size) + 6);
+      margin-top: -12px;
+    }
+
+    &[x-placement="right-start"] .popper__arrow {
+      top: 20px !important;
+    }
 
     &[x-placement^="left"] {
       margin-right: calc(var(--popover-arrow-size) + 6);

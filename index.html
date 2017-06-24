@@ -62,12 +62,12 @@
     </div>
     <div id="popover" >
       <h2>popover</h2>
-      <div style="margin: 100px;">
+      <div style="margin: 100px 400px;">
         <el-popover
           ref="popover1"
           placement="bottom"
           width="200"
-          trigger="hover"
+          trigger="click"
         >
           <ul>
             <li><a href="#">123123123</a></li>
@@ -87,6 +87,18 @@
           content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
         </el-popover>
         <el-button v-popover:popover2>Hover Right-Start</el-button>
+        <el-popover
+          ref="popover3"
+          placement="right-start"
+          width="200"
+          trigger="click"
+          style="position: relative"
+        >
+          <h3>title</h3>
+          <div id="icon" style="position: absolute; right:0; top: 0;" @click="hidePopover()">CLOSE</div>
+          <div>这是一段内容,这是一段内容,这是一段内容,这是一段内容。 这是一段内容,这是一段内容,这是一段内容,这是一段内容。</div>
+        </el-popover>
+        <el-button v-popover:popover3>Hover Right-Start</el-button>
       </div>
     </div>
   </div>
@@ -113,7 +125,12 @@
             ]
           }
         }
-      }
+      },
+      methods: {
+        hidePopover(event) {
+          document.documentElement.click();
+        }
+      },
     })
   </script>
 </body>
