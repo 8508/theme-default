@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="./dev/form.css">
   <link rel="stylesheet" href="./dev/form-item.css">
   <link rel="stylesheet" href="./dev/input.css">
+  <link rel="stylesheet" href="./dev/popover.css">
+  <link rel="stylesheet" href="./dev/button.css">
 </head>
 <body>
   <h1>Docs</h1>
@@ -57,6 +59,35 @@
           <el-input v-model="ruleForm.type" :disabled="true" placeholder="test"></el-input>
         </el-form-item>
       </el-form>
+    </div>
+    <div id="popover" >
+      <h2>popover</h2>
+      <div style="margin: 100px;">
+        <el-popover
+          ref="popover1"
+          placement="bottom"
+          width="200"
+          trigger="hover"
+        >
+          <ul>
+            <li><a href="#">123123123</a></li>
+            <li><a href="#">123123123</a></li>
+            <li><a href="#">123123123</a></li>
+            <li><a href="#">123123123</a></li>
+            <li><a href="#">123123123</a></li>
+          </ul>
+        </el-popover>
+        <el-button v-popover:popover1>Hover Bottom</el-button>
+        <el-popover
+          ref="popover2"
+          placement="right-start"
+          title="标题"
+          width="200"
+          trigger="click"
+          content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
+        </el-popover>
+        <el-button v-popover:popover2>Hover Right-Start</el-button>
+      </div>
     </div>
   </div>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>

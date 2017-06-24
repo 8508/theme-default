@@ -453,12 +453,14 @@
   /* Popover
  -------------------------- */
   --popover-fill: var(--color-white);
-  --popover-font-size: 12px;
+  --popover-font-size: 14px;
   --popover-border-color: var(--disabled-border-base);
-  --popover-arrow-size: 6px;
+  --popover-arrow-size: 10px;
   --popover-padding: 10px;
-  --popover-title-font-size: 13px;
-  --popover-title-color: var(--color-base-black);
+  --popover-padding-with-title: 20px;
+  --popover-title-font-size: 14px;
+  --popover-title-color: #222;
+  --popover-title-font-weight: 700;
 
   /* Tooltip
   -------------------------- */
