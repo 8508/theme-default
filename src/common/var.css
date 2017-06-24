@@ -95,9 +95,9 @@
   --checkbox-color: var(--color-checkbox-text);
   --checkbox-input-height: 16px;
   --checkbox-input-width: 16px;
-  --checkbox-input-border-radius: var(--border-radius-small);
+  --checkbox-input-border-radius: 2px;
   --checkbox-input-fill: var(--color-white);
-  --checkbox-input-border: var(--border-base);
+  --checkbox-input-border: 2px solid #BBB;
   --checkbox-input-border-color: var(--color-skin);
   --checkbox-icon-color: var(--color-white);
 
@@ -454,12 +454,14 @@
   /* Popover
  -------------------------- */
   --popover-fill: var(--color-white);
-  --popover-font-size: 12px;
+  --popover-font-size: 14px;
   --popover-border-color: var(--disabled-border-base);
-  --popover-arrow-size: 6px;
+  --popover-arrow-size: 10px;
   --popover-padding: 10px;
-  --popover-title-font-size: 13px;
-  --popover-title-color: var(--color-base-black);
+  --popover-padding-with-title: 20px;
+  --popover-title-font-size: 14px;
+  --popover-title-color: #222;
+  --popover-title-font-weight: 700;
 
   /* Tooltip
   -------------------------- */

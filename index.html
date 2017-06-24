@@ -19,6 +19,13 @@
   <link rel="stylesheet" href="./dev/form.css">
   <link rel="stylesheet" href="./dev/form-item.css">
   <link rel="stylesheet" href="./dev/input.css">
+  <link rel="stylesheet" href="./dev/popover.css">
+  <link rel="stylesheet" href="./dev/button.css">
+  <style>
+    body {
+      min-height: 2000px;
+    }
+  </style>
 </head>
 <body>
   <h1>Docs</h1>
@@ -26,6 +33,7 @@
     <li><a href="#radio">radio</a></li>
     <li><a href="#checkbox">checkbox</a></li>
     <li><a href="#form">form/input</a></li>
+    <li><a href="#popover">popover</a></li>
   </ul>
   <div id="app">
     <div id="radio">
@@ -71,6 +79,47 @@
         </el-form-item>
       </el-form>
     </div>
+    <div id="popover" >
+      <h2>popover</h2>
+      <div style="margin: 100px 400px;">
+        <el-popover
+          ref="popover1"
+          placement="bottom"
+          width="200"
+          trigger="click"
+        >
+          <ul>
+            <li><a href="#">123123123</a></li>
+            <li><a href="#">123123123</a></li>
+            <li><a href="#">123123123</a></li>
+            <li><a href="#">123123123</a></li>
+            <li><a href="#">123123123</a></li>
+          </ul>
+        </el-popover>
+        <el-button v-popover:popover1>Click Bottom</el-button>
+        <el-popover
+          ref="popover2"
+          placement="right-start"
+          title="标题"
+          width="200"
+          trigger="click"
+          content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
+        </el-popover>
+        <el-button v-popover:popover2>Click Right-Start</el-button>
+        <el-popover
+          ref="popover3"
+          placement="right-start"
+          width="200"
+          trigger="click"
+          style="position: relative"
+        >
+          <h3>title</h3>
+          <div id="icon" style="position: absolute; right:0; top: 0;" @click="hidePopover()">CLOSE</div>
+          <div>这是一段内容,这是一段内容,这是一段内容,这是一段内容。 这是一段内容,这是一段内容,这是一段内容,这是一段内容。</div>
+        </el-popover>
+        <el-button v-popover:popover3>Click Right-Start Custom Content</el-button>
+      </div>
+    </div>
   </div>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
@@ -95,7 +144,12 @@
             ]
           }
         }
-      }
+      },
+      methods: {
+        hidePopover(event) {
+          document.documentElement.click();
+        }
+      },
     })
   </script>
 </body>
