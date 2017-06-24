@@ -7,6 +7,15 @@
   <title>Document</title>
   <link rel="stylesheet" href="./dev/radio.css">
   <link rel="stylesheet" href="./dev/checkbox.css">
+  <link rel="stylesheet" href="./dev/icon.css">
+  <link rel="stylesheet" href="./dev/button.css">
+  <link rel="stylesheet" href="./dev/pagination.css">
+  <style>
+    /* 测试分页居中 */
+    .pagination-center {
+      text-align: center;
+    }
+  </style>
   <link rel="stylesheet" href="./dev/form.css">
   <link rel="stylesheet" href="./dev/form-item.css">
   <link rel="stylesheet" href="./dev/input.css">
@@ -35,6 +44,10 @@
         <el-checkbox label="选中且禁用" disabled></el-checkbox>
       </el-checkbox-group>
     </div>
+    <el-pagination class="pagination-center"
+      layout="prev, pager, next"
+      :total="1000">
+    </el-pagination>
     <div id="form" style="width: 400px">
       <h2>form/input</h2>
       <el-form

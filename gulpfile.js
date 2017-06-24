@@ -20,9 +20,15 @@ gulp.task('copyfont', function() {
     .pipe(gulp.dest('./lib/fonts'));
 });
 
+gulp.task('copydevfont', function() {
+  return gulp.src('./src/fonts/**')
+    .pipe(cssmin())
+    .pipe(gulp.dest('./dev/fonts'));
+});
+
 gulp.task('build', ['compile:build', 'copyfont']);
 
-gulp.task('compile:dev', function () {
+gulp.task('compile:dev', ['copydevfont'], function () {
   return gulp.src('./src/*.css')
     .pipe(sourcemaps.init())
     .pipe(postcss([salad]))

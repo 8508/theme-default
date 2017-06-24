@@ -1,14 +1,31 @@
+/**
+ * radiohead iconfont
+ * 主站已经有了此font-family定义，以后可以测试下，如果可以继承到的话这里可以不定义这个font-face
+ */
+@font-face {
+  font-family: 'iconfont';  /* project id 331511 */
+  src: url('//at.alicdn.com/t/font_0haxvhu65vobt9.eot');
+  src: url('//at.alicdn.com/t/font_0haxvhu65vobt9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_0haxvhu65vobt9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_0haxvhu65vobt9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_0haxvhu65vobt9.svg#iconfont') format('svg');
+}
+
+/**
+ * element-ui 自带iconfont
+ * radiohead没有的，仍旧沿用element-ui自带设定，避免乱码或者显示问题，分页已遇到
+ */
 @font-face {
     font-family: 'element-icons';
-    src: url('fonts/element-icons.woff?t=1472440741') format('woff'), /* chrome, firefox */
-      url('fonts/element-icons.ttf?t=1472440741') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    src: url('fonts/element-icons.woff?t=1472440741') format('woff'),
+      url('fonts/element-icons.ttf?t=1472440741') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 [class^="el-icon-"], [class*=" el-icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'element-icons' !important;
+    font-family: 'iconfont' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -23,43 +40,97 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+/**
+ * radiohead 和 element-ui共有的icon，直接替换为radiohead的字体。但是每个用到的特例可能都需要覆写
+ * 我们的iconfont，在最小的12px设定下的占位空间，和element-ui的有出入。
+ */
+.el-icon-search:before { content: "\e65b;"; }
+.el-icon-caret-left:before { content: "\e65a"; }
+.el-icon-caret-right:before { content: "\e65c"; }
+.el-icon-close:before { content: "\e647"; }
+.el-icon-circle-check:before { content: "\e646"; }
+.el-icon-delete,
+.el-icon-delete2:before { content: "\e649"; }
+.el-icon-information:before { content: "\e65d"; }
+.el-icon-warning:before { content: "\e65d"; }
+
+/**
+ * 可通过CSS3变换得到的，但是transform会有占位空间问题，需要具体问题具体解决
+ */
+
+.el-icon-caret-top,
+.el-icon-caret-bottom {
+    &:before {
+      content: "\e65a"; 
+      /*
+      :before伪类元素设置transform的方法
+      https://stackoverflow.com/questions/16108346/transform-before-or-after-item
+      */
+      display: inline-block;
+      vertical-align: middle;
+    }
+}
+.el-icon-caret-top:before { transform: rotate(90deg); }
+.el-icon-caret-bottom:before { transform: rotate(-90deg); }
+
+/**
+ * element-ui独有
+ */
+.el-icon-arrow-down,
+.el-icon-arrow-left,
+.el-icon-arrow-right,
+.el-icon-arrow-up,
+.el-icon-check,
+.el-icon-circle-close,
+.el-icon-circle-cross,
+.el-icon-upload,
+.el-icon-d-arrow-left,
+.el-icon-d-arrow-right,
+.el-icon-more,
+.el-icon-d-caret,
+.el-icon-date,
+.el-icon-document,
+.el-icon-edit,
+.el-icon-loading,
+.el-icon-menu,
+.el-icon-message,
+.el-icon-minus,
+.el-icon-picture,
+.el-icon-plus,
+.el-icon-setting,
+.el-icon-share,
+.el-icon-star-off,
+.el-icon-star-on,
+.el-icon-time,
+.el-icon-upload2,
+.el-icon-view { font-family: 'element-icons' !important; }
+
 .el-icon-arrow-down:before { content: "\e600"; }
 .el-icon-arrow-left:before { content: "\e601"; }
 .el-icon-arrow-right:before { content: "\e602"; }
 .el-icon-arrow-up:before { content: "\e603"; }
-.el-icon-caret-bottom:before { content: "\e604"; }
-.el-icon-caret-left:before { content: "\e605"; }
-.el-icon-caret-right:before { content: "\e606"; }
-.el-icon-caret-top:before { content: "\e607"; }
 .el-icon-check:before { content: "\e608"; }
-.el-icon-circle-check:before { content: "\e609"; }
 .el-icon-circle-close:before { content: "\e60a"; }
 .el-icon-circle-cross:before { content: "\e60b"; }
-.el-icon-close:before { content: "\e60c"; }
 .el-icon-upload:before { content: "\e60d"; }
 .el-icon-d-arrow-left:before { content: "\e60e"; }
 .el-icon-d-arrow-right:before { content: "\e60f"; }
+.el-icon-more:before { content: "\e61a"; }
 .el-icon-d-caret:before { content: "\e610"; }
 .el-icon-date:before { content: "\e611"; }
-.el-icon-delete:before { content: "\e612"; }
 .el-icon-document:before { content: "\e613"; }
 .el-icon-edit:before { content: "\e614"; }
-.el-icon-information:before { content: "\e615"; }
 .el-icon-loading:before { content: "\e616"; }
 .el-icon-menu:before { content: "\e617"; }
 .el-icon-message:before { content: "\e618"; }
 .el-icon-minus:before { content: "\e619"; }
-.el-icon-more:before { content: "\e61a"; }
 .el-icon-picture:before { content: "\e61b"; }
 .el-icon-plus:before { content: "\e61c"; }
-.el-icon-search:before { content: "\e61d"; }
 .el-icon-setting:before { content: "\e61e"; }
 .el-icon-share:before { content: "\e61f"; }
 .el-icon-star-off:before { content: "\e620"; }
 .el-icon-star-on:before { content: "\e621"; }
 .el-icon-time:before { content: "\e622"; }
-.el-icon-warning:before { content: "\e623"; }
-.el-icon-delete2:before { content: "\e624"; }
 .el-icon-upload2:before { content: "\e627"; }
 .el-icon-view:before { content: "\e626"; }
 

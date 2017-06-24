@@ -438,17 +438,18 @@
 
   /* Pagination
  -------------------------- */
-  --pagination-font-size: 13px;
-  --pagination-fill: var(--color-white);
-  --pagination-color: var(--link-color);
-  --pagination-border-radius: 2px;
+  --pagination-font-size: 12px;
+  --pagination-fill: var(--color-white); /* 背景色 */
+  --pagination-color: #888; /* 常规状态文本色 */
+  --pagination-border-radius: 4px;
+  --pagination-button-margin: 0 4px; /* 按钮之间间距 */
   --pagination-button-color: var(--color-light-silver);
   --pagination-button-size: 28px;
   --pagination-button-disabled-color: #e4e4e4;
   --pagination-button-disabled-fill: var(--color-white);
-  --pagination-border-color: var(--disabled-border-base);
-  --pagination-hover-fill: var(--color-primary);
-  --pagination-hover-color: var(--color-white);
+  --pagination-border-color: #D6D6D6;
+  --pagination-hover-fill: #D63C15; /* pager 选中状态和hover状态背景色 */
+  --pagination-hover-color: var(--color-white); /* pager 选中状态和hover状态文本色 */
 
   /* Popover
  -------------------------- */
