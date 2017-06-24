@@ -32,6 +32,7 @@
   <ul>
     <li><a href="#radio">radio</a></li>
     <li><a href="#checkbox">checkbox</a></li>
+    <li><a href="#pagination">pagination</a></li>
     <li><a href="#form">form/input</a></li>
     <li><a href="#popover">popover</a></li>
   </ul>
@@ -52,10 +53,13 @@
         <el-checkbox label="选中且禁用" disabled></el-checkbox>
       </el-checkbox-group>
     </div>
-    <el-pagination class="pagination-center"
-      layout="prev, pager, next"
-      :total="1000">
-    </el-pagination>
+    <div id="pagination">
+      <h2>pagination</h2>
+      <el-pagination class="pagination-center"
+        layout="prev, pager, next"
+        :total="1000">
+      </el-pagination>
+    </div>
     <div id="form" style="width: 400px">
       <h2>form/input</h2>
       <el-form
