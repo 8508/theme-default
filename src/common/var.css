@@ -95,9 +95,9 @@
   --checkbox-color: var(--color-checkbox-text);
   --checkbox-input-height: 16px;
   --checkbox-input-width: 16px;
-  --checkbox-input-border-radius: var(--border-radius-small);
+  --checkbox-input-border-radius: 2px;
   --checkbox-input-fill: var(--color-white);
-  --checkbox-input-border: var(--border-base);
+  --checkbox-input-border: 2px solid #BBB;
   --checkbox-input-border-color: var(--color-skin);
   --checkbox-icon-color: var(--color-white);
 
