@@ -11,8 +11,8 @@
     display: inline-block;
     vertical-align: middle;
     background-color: var(--color-white);
-    width: var(--msgbox-width);
-    border-radius: var(--msgbox-border-radius);
+    width: 300px;
+    border-radius: 4px;
     font-size: var(--msgbox-font-size);
     overflow: hidden;
     backface-visibility: hidden;
@@ -39,8 +39,8 @@
 
     @e headerbtn {
       position: absolute;
-      top: 19px;
-      right: 20px;
+      top: 15px;
+      right: 15px;
       background: transparent;
       border: none;
       outline: none;
@@ -50,10 +50,10 @@
       .el-message-box__close {
         color: #999;
       }
-      
+
       &:focus, &:hover {
         .el-message-box__close {
-          color: var(--color-primary);
+          color: var(--color-skin-hover);
         }
       }
 
@@ -86,10 +86,10 @@
     @e title {
       padding-left: 0;
       margin-bottom: 0;
-      font-size: var(--msgbox-font-size);
-      font-weight: bold;
+      font-size: 14;
+      font-weight: 700;
       height: 18px;
-      color: #333;
+      color: #222;
     }
 
     @e message {
@@ -102,11 +102,13 @@
     }
 
     @e btns {
-      padding: 10px 20px 15px;
-      text-align: right;
+      padding: 24px 20px 20px 20px;
+      display: flex;
+      flex-flow: row-reverse;
+      justify-content: flex-end;
 
       & button:nth-child(2) {
-        margin-left: 10px;
+        margin-left: 0;
       }
     }
 
@@ -167,4 +169,8 @@
     transform: translate3d(0, -20px, 0);
     opacity: 0;
   }
+}
+
+.v-modal {
+  opacity: 0.1;
 }
