@@ -205,12 +205,12 @@
   }
 }
 
-.vox-button__confirm {
+.vox-Button__confirm {
   @mixin vox-button #FFF, #D63C15, #C23714;
   margin-left: 0;
 }
 
-.vox-button__cancel {
+.vox-Button__cancel {
   @mixin vox-button #888, #F4F4F4, #EAEAEA;
   margin-left: 20px;
 }
