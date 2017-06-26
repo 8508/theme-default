@@ -21,7 +21,7 @@
     & + .el-button {
       margin-left: 10px;
     }
-    
+
     @mixin button-size var(--button-padding-vertical), var(--button-padding-horizontal), var(--button-font-size), var(--button-border-radius);
 
     &:hover,
@@ -29,7 +29,7 @@
       color: var(--color-primary);
       border-color: @color;
     }
-    
+
     &:active {
       color: shade(var(--color-primary), var(--button-active-shade-percent));
       border-color: @color;
@@ -53,7 +53,7 @@
         border-color: var(--color-primary);
         color: var(--color-primary);
       }
-      
+
       &:active {
         background: var(--color-white);
         border-color: shade(var(--color-primary), var(--button-active-shade-percent));
@@ -203,4 +203,14 @@
       }
     }
   }
+}
+
+.vox-Button__confirm {
+  @mixin vox-button #FFF, #D63C15, #C23714;
+  margin-left: 0;
+}
+
+.vox-Button__cancel {
+  @mixin vox-button #888, #F4F4F4, #EAEAEA;
+  margin-left: 20px;
 }

@@ -14,21 +14,21 @@ gulp.task('compile:build', function() {
     .pipe(gulp.dest('./lib'));
 });
 
-gulp.task('copyfont', function() {
+gulp.task('copyfont:build', function() {
   return gulp.src('./src/fonts/**')
     .pipe(cssmin())
     .pipe(gulp.dest('./lib/fonts'));
 });
 
-gulp.task('copydevfont', function() {
+gulp.task('copyfont:dev', function() {
   return gulp.src('./src/fonts/**')
     .pipe(cssmin())
     .pipe(gulp.dest('./dev/fonts'));
 });
 
-gulp.task('build', ['compile:build', 'copyfont']);
+gulp.task('build', ['compile:build', 'copyfont:build']);
 
-gulp.task('compile:dev', ['copydevfont'], function () {
+gulp.task('compile:dev', function () {
   return gulp.src('./src/*.css')
     .pipe(sourcemaps.init())
     .pipe(postcss([salad]))
@@ -40,7 +40,7 @@ gulp.task('compile:bs', ['compile:dev'], function () {
   browserSync.reload();
 });
 
-gulp.task('dev', function() {
+gulp.task('dev', ['copyfont:dev'], function() {
   browserSync.init({
     server: './',
     port: 9849,

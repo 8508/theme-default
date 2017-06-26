@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="./dev/icon.css">
   <link rel="stylesheet" href="./dev/button.css">
   <link rel="stylesheet" href="./dev/pagination.css">
+  <link rel="stylesheet" href="./dev/message.css">
+  <link rel="stylesheet" href="./dev/message-box.css">
   <style>
     /* 测试分页居中 */
     .pagination-center {
@@ -35,6 +37,7 @@
     <li><a href="#pagination">pagination</a></li>
     <li><a href="#form">form/input</a></li>
     <li><a href="#popover">popover</a></li>
+    <li><a href="#message-box">message-box</a></li>
   </ul>
   <div id="app">
     <div id="radio">
@@ -124,9 +127,15 @@
         <el-button v-popover:popover3>Click Right-Start Custom Content</el-button>
       </div>
     </div>
+    <div id="message-box">
+      <h2>message-box</h2>
+      <div>
+        <el-button type="text" @click="open2">点击打开 Message Box</el-button>
+      </div>
+    </div>
   </div>
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="//cdn.bootcss.com/vue/2.3.4/vue.js"></script>
+  <script src="//cdn.bootcss.com/element-ui/1.3.6/index.js"></script>
   <script>
     new Vue({
       el: '#app',
@@ -152,6 +161,19 @@
       methods: {
         hidePopover(event) {
           document.documentElement.click();
+        },
+        open2() {
+          this.$confirm(''/* content */, '确定要删除该商品吗？' /* title */, {
+            confirmButtonText: '确定',
+            confirmButtonClass: 'vox-Button__confirm',
+            cancelButtonText: '取消',
+            cancelButtonClass: 'vox-Button__cancel'
+          }).then(() => {
+            this.$message({
+              type: 'success',
+              message: '删除成功!'
+            });
+          });
         }
       },
     })
