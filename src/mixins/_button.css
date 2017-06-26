@@ -9,7 +9,7 @@
     border-color: tint($border-color, var(--button-hover-tint-percent));
     color: $color;
   }
-  
+
   &:active {
     background: shade($background-color, var(--button-active-shade-percent));
     border-color: shade($border-color, var(--button-active-shade-percent));
@@ -34,7 +34,7 @@
       border-color: $border-color;
       color: $background-color;
     }
-    
+
     &:active {
       background: var(--color-white);
       border-color: shade($border-color, var(--button-active-shade-percent));
@@ -48,4 +48,25 @@
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
   border-radius: $border-radius;
+}
+
+@define-mixin vox-button $text-color, $bg-color, $bg-color-hover {
+  display: inline-block;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 13px;
+  color: $text-color;
+  line-height: 36px;
+  height: 36px;
+  cursor: pointer;
+  padding: 0 16px;
+  background-color: $bg-color;
+  border: 0;
+  &:hover,
+  &:focus {
+    color: $text-color;
+    background-color: $bg-color-hover;
+  }
 }
