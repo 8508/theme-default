@@ -54,7 +54,9 @@
 
     &:last-child {
       margin-bottom: -1px;
-      border-bottom: 0;
+      .el-collapse-item__header {
+        border-bottom: 0;
+      }
     }
   }
 }
