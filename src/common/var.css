@@ -598,16 +598,17 @@
 
   /* Collapse
   --------------------------*/
-  --collapse-border-color: color(var(--border-color-base) h(-3) s(27%) l(90%));
-  --collapse-header-height: 43px;
+  --collapse-border-color: #E7E7E7;
+  --collapse-header-height: 59px;
   --collapse-border-radius: 0;
-  --collapse-header-padding: 20px;
-  --collapse-header-fill: var(--color-white);
-  --collapse-header-color: var(--color-extra-light-black);
-  --collapse-header-size: 13px;
-  --collapse-content-fill: var(--color-dark-white);
+  --collapse-header-padding: 20px 0;
+  --collapse-header-fill: #FAFAFA;
+  --collapse-header-color: #333;
+  --collapse-header-size: 15px;
+  --collapse-header-weight: 700;
+  --collapse-content-fill: #FAFAFA;
   --collapse-content-size: 13px;
-  --collapse-content-color: var(--color-base-black);
+  --collapse-content-color: #888;
 
   /* Transfer
   --------------------------*/
