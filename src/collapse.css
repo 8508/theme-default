@@ -57,6 +57,9 @@
       .el-collapse-item__header {
         border-bottom: 0;
       }
+      .el-collapse-item__wrap {
+        border-bottom: 0;
+      }
     }
   }
 }
